@@ -1,0 +1,33 @@
+.swiper-containter {
+}
+.swiper-container,
+.swiper-wrapper {
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+  margin: 0px 0px;
+  
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: flex-end;
+ 
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: flex-end;
+  width: auto;
+  margin-right: 0px;
+  width: 200px;
+  height: 400px;
+  
+}
+.img {
+  max-width: 780px;
+  max-height: 400px;
+  padding-left: 80px;
+  padding-right: 85px;
+  background-color: green;
+}

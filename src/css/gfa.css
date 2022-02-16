@@ -1,0 +1,28 @@
+.body{
+    background: white;
+}
+
+.diagram {
+    display:inline-block;
+    box-sizing: border-box;
+    height: 40%;
+    width: 50%;
+}
+
+.border{
+    margin-left: 10px;
+    margin-right: 10px ;
+}
+
+.header-diagram {
+    display:inline-block;
+    box-sizing: border-box;
+    text-align: left;
+    width: 50%;
+    font-size: 1rem;
+}
+
+.header-part{
+    border: 1px double black; /* Параметры границы */
+    padding: 10px; /* Поля вокруг текста */
+}
