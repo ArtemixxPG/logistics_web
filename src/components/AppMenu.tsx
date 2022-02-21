@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import '../css/menustyle.css'
 import '../css/icon.css'
@@ -8,12 +8,14 @@ import logo from '../assests/logoWhite.png'
 // @ts-ignore
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
+import {Modal} from "./AppWindow";
 
 interface IMenuProps {
     isMenuOpen: boolean;
 }
 
 export const Menu = ({ isMenuOpen }: IMenuProps) => {
+    const [isModal, setModal] = useState(false);
     return (
         <div className={`app-menu ${isMenuOpen ? "menu-open" : ""}`}>
 
@@ -28,8 +30,11 @@ export const Menu = ({ isMenuOpen }: IMenuProps) => {
                         <Link className={"st-menu-link"} to="/gfa" id="gfa" ><li className={"icon icon-georadar"}>GFA </li>
                         </Link>
 
-
                     </ul>
+                    <footer>
+                       <li className={"icon icon-georadar"} onClick={setModal(!isModal)}>Load CSV </li>
+                        <Modal closeModal={isModal}></Modal>
+                    </footer>
                 </SimpleBar>
                 </nav>
             </div>
